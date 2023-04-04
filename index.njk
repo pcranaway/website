@@ -1,0 +1,28 @@
+---
+layout: layout.njk
+eleventyImport:
+  collections: ["post"]
+---
+
+<div class="profile-card">
+  <img height="150" src="https://i.pinimg.com/originals/33/47/01/3347014306c9c840fbc3ee857491f18d.jpg">
+
+  <div>
+    <h1>Alex P.</h1>
+
+    <p> high school student with way too many interests</p>
+
+    <ul>
+      <li><a href="https://github.com/pcranaway">github</a></li>
+      <li><a href="mailto:gnu@duck.com">email</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="blog-posts">
+  <ul>
+    {%- for post in collections.post -%}
+      <li><a href="/post/{{ post.data.title | slugify }}">{{ post.data.title }}</a></li>
+    {%- endfor -%}
+  </ul>
+</div>

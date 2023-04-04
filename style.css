@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;900&display=swap');
+
+/* general style */
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  font-weight: 500;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 10px auto;
+
+  background-color: white;
+}
+
+h1 {
+  font-weight: 900;
+  color: #0d48c7;
+}
+
+a {
+  text-decoration: none;
+  color: #0d48c7;
+}
+
+
+/* the profile card */
+.profile-card {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+
+/* the image -- make sure that it's on the left to the rest of the card */
+.profile-card img {
+  margin-right: 20px;
+}
+
+/* the list of links -- make sure that it doesn't look like actually look like
+ * an HTML list */
+.profile-card ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.profile-card ul > li {
+  display: inline-block;
+}
+
+.profile-card li:not(:last-child):after {
+  content: ", ";
+}
+
+/* top navbar for blog posts */
+.navbar {
+  display: flex;
+
+  align-items: center;
+}
+
+.navbar img {
+  margin-right: 10px;
+}
